@@ -1,0 +1,15 @@
+import React from "react";
+import Header from "./ui/Header";
+import Footer from "./ui/Footer";
+
+const Layout = ({ children }) => {
+  return (
+    <div className="bg-gradient-to-br from-background to-muted dark:from-darkBackground dark:to-darkMuted">
+      <Header />
+      <main className="min-h-screen container mx-auto px-4 py-8">{children}</main>
+      <Footer />
+    </div>
+  );
+};
+
+export default Layout;

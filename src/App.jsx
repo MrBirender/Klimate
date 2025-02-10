@@ -1,12 +1,19 @@
-import React from 'react'
+import React from "react";
+import Layout from "./components/Layout";
+import { BrowserRouter as Router } from "react-router-dom"; // Fix: Correct import
+import { ThemeProvider } from "./context/ThemeContext";
+import ThemeSwitcher from "./components/ui/ThemeSwitcher";
 
 const App = () => {
   return (
-    <div>
-      <h1 className='text-3xl text-green-500'>Hello world</h1>
-      <p>The test branch has given an upstream</p>
-    </div>
-  )
-}
+    <ThemeProvider>
+      <Router>
+        <Layout>
+          <h1>Hello world</h1>
+        </Layout>
+      </Router>
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;
